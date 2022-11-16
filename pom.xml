@@ -4,9 +4,23 @@
   <groupId>in.ashokit</groupId>
   <artifactId>01-maven-web-app</artifactId>
   <packaging>war</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0-snapshot</version>
   <name>01-maven-web-app Maven Webapp</name>
   <url>http://maven.apache.org</url>
+	
+  <distributionManagement>  
+	<repository>
+		<id>nexus</id>
+		<name>Ashok IT Releases Nexus Repo</name>
+		<url>http://3.110.106.135:8081/repository/ashok-release-repository</url>
+	</repository>
+	
+	<snapshotRepository>
+		<id>nexus</id>
+		<name>Ashok IT Snapshots Nexus Repo</name>
+		<url>http://http://3.110.106.135:8081/repository/ashok-snapshot-repository</url>
+	</snapshotRepository>	
+</distributionManagement>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -15,6 +29,10 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+   <properties>
+	<sonar.host.url>http://43.205.127.25:9000/</sonar.host.url>
+	<sonar.login>7aa9721c1f9e6cf18a451a54c6a58f624dc14d0b</sonar.login>
+  </properties>
   <build>
     <finalName>01-maven-web-app</finalName>
   </build>
